@@ -52,6 +52,7 @@ public class UserMapperImpl implements UserMapper {
 
         User.UserBuilder user = User.builder();
 
+        user.roles( mapRolesFromStringList( request.getRoles() ) );
         user.username( request.getUsername() );
         user.password( request.getPassword() );
         user.firstName( request.getFirstName() );
